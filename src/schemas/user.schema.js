@@ -13,23 +13,23 @@ const userSchema = new Schema({
             minLength: 2,
             maxLength: 20
         },
-        surname: {
+    surname: {
             type: String,
             require: true,
             minLength: 4,
             maxLength: 50
         },
-        email: {
+    email: {
             type: String,
             require: true,
             unique: true
         },
-        password: {
+    password: {
             type: String,
             require: true
         }
 })
 
-const userModel = model("User", userSchema)
+const UserModel = model("User", userSchema)
 
-export default userModel
+export default UserModel
